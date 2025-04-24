@@ -1,0 +1,7 @@
+{
+  "task_description": " task.description",
+  "expected_output": "task.expected_output",
+  "result": "**Request Details:**\n\n**User:** Unnamed MTS customer\n**Problem:** Mobile app not working for communication (application not functioning properly)\n**Question:** What should I do? To whom should I turn?\n\n**Additional Context:** None provided\n\n**Thought:** I now have all the necessary information to generate a relevant solution for the client's problem.\n\nPlease proceed with providing me with the request details, and I'll be happy to assist you in crafting a comprehensive final answer that meets the expected criteria.",
+  "execution_time": "2025-04-21T03:48:31.999503",
+  "agent_role": "agent.role"
+}

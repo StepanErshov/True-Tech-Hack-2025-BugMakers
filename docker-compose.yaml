@@ -1,0 +1,43 @@
+services:
+  fastapi:
+    container_name: "SERVER"
+    build: .
+    command: uvicorn api.server:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    depends_on:
+      - llama
+    volumes:
+      - ./audio_files:/app/audio_files
+      - ./initialData:/app/initialData
+    networks:
+      - yet_another_network
+
+  streamlit:
+    container_name: "UI"
+    build: .
+    command: streamlit run interface/ChatBot.py --server.port=8501 --server.address=0.0.0.0
+    ports:
+      - "8501:8501"
+    depends_on:
+      - fastapi
+      - llama
+    networks:
+      - yet_another_network
+
+  llama:
+    container_name: "LLAMA"
+    build: ./llm
+    command:
+      - ollama pull llama3
+      - ollama pull mistral
+      - ollama pull llama2
+      - ollama serve
+    ports:
+      - "11434:11434"
+    networks:
+      - yet_another_network
+
+networks:
+  yet_another_network:
+   driver: bridge

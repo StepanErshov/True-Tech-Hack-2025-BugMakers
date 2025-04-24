@@ -1,0 +1,1 @@
+{"error": "litellm.APIConnectionError: OllamaException - litellm.Timeout: Connection timed out after 600.0 seconds.", "timestamp": "2025-04-22T01:17:12.524209"}

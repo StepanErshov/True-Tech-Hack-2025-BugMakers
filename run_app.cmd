@@ -1,0 +1,1 @@
+start /B uvicorn api.server:app   & python -m streamlit run .\interface\ChatBot.py   & ollama serve 

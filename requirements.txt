@@ -1,0 +1,17 @@
+pandas==2.2.2
+fastapi==0.110.3
+requests==2.32.3
+pydantic==2.9.2
+streamlit==1.41.1
+numpy==1.26.4
+openpyxl==3.1.5
+audio_recorder_streamlit==0.0.10
+uvicorn==0.29.0
+python-dotenv==1.0.1
+python-multipart==0.0.20
+#autogen==0.8.7
+crewai==0.114.0
+langchain==0.3.23
+transformers==4.46.1
+weaviate==0.1.2
+onnxruntime==1.16.0
